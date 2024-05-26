@@ -13,7 +13,7 @@ public class Student {
         this.name = name;
         this.grade =grade;
         this.feePaid = 0;
-        this.feeTotal = 11000;
+        this.feeTotal = 110000;
     }
 
     public int getId (){
@@ -28,10 +28,21 @@ public class Student {
     public String getName(){
         return name;
     }
+    public void setFeePaid(int feePaid){
+        this.feePaid = feePaid;
+    }
     public void payFee(int fee){
         int totalFee =0;
         totalFee += fee;
+        feePaid = totalFee;
         School.updateTotalProfit(totalFee);
+    }
+    public int getRemainingFees(){
+        return feeTotal - feePaid;
+    }
+    @Override
+    public String toString() {
+        return "Student's name is "+this.name + " ,Total fees paid by student is RS. " + this.feePaid ;
     }
 
 }

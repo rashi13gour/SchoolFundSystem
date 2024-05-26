@@ -30,5 +30,6 @@ public class Main {
         System.out.println("School has earned Rs. " + dav.getTotalProfit());
         t1.recievedSalary(t1.getSalary());
         System.out.println(t1.getName()+ " earned salary RS. "+ t1.getSalary()+ " and School is left with Rs. "+ dav.getTotalProfit());
+        System.out.println(s2);
     }
 }
